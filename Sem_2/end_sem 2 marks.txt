@@ -1,0 +1,20 @@
+AEC 14 28
+BEE 14 33
+Maths 12 29
+Phy 12 27
+
+
+
+33   DSA
+6 , 29   OOP
+6, 10, 33, 36 , 38 HSE
+
+CSE4
+Dr. Subhadarshan Sahoo	
+Mr. Mahendra Kumar Gourisaria	
+Dr.Manoranjan Sahoo	
+Dr. Sarbeswar Mohanty	
+Ms. Priyanka Roy	
+Sunil Kumar Mishra	
+Mr. Mahendra Kumar Gourisaria	
+Ms. Priyanka Roy
