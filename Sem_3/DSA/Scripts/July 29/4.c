@@ -70,6 +70,9 @@ int main(){
     struct employee emp[3];
     int numofEmployees;
     
+    printf("Enter number of employees: ");
+    scanf("%d", &numOfEmployees);
+    
     for(int i=0; i<numofEmployees; i++){
         fflush(stdin);
         printf("\nEnter Details of Employee %d", i+1);
