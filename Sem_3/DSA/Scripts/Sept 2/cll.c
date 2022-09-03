@@ -138,7 +138,7 @@ void del_pos(){
     int count = 1, pos;
     printf("Enter position: ");
     scanf("%d", &pos-1);
-    while(ptr!=NULL && count != pos-1){
+    while(ptr!=NULL && count != pos){
         ptr = ptr->next;
         count++;
     }
