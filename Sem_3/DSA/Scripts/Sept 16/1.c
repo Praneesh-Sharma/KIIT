@@ -11,9 +11,9 @@ void create(int a[n][n], int row, int column){
     }
 }
 
-void add_mat(int a[n][n],int b[n][n],int c[n][n], int row3, int column3){
-    for(int i=0; i<row3; i++){
-        for(int j=0; j<column3; j++){
+void add_mat(int a[n][n],int b[n][n],int c[n][n], int row, int column){
+    for(int i=0; i<row; i++){
+        for(int j=0; j<column; j++){
             c[i][j] = a[i][j] + b[i][j];
         }
     }
@@ -44,26 +44,15 @@ void sparse_display(int res[n][3]){
 }
 
 int main(){
-    int a[n][n], b[n][n], c[n][n], res[n][3], row1, column1, row2, column2, row3, column3;
-    printf("Enter number of rows and columns of matrix 1: ");
-    scanf("%d %d", &row1, &column1);
-    create(a, row1, column1);
-    printf("Enter number of rows and columns of matrix 2: ");
-    scanf("%d %d", &row2, &column2);
-    create(b, row2, column2);
-
-    if(column1>column2)
-        column3 = column1;
-    else
-        column3 = column2;
-
-    if(row1>row2)
-        row3 = row1;
-    else
-        row3 = row2;
-
-    add_mat(a, b, c, row3, column3);
-    sparse_creation(c, row3, column3, res);
+    int a[n][n], b[n][n], c[n][n], res[n][3], row, column;
+    printf("Enter number of rows and columns of matrices: ");
+    scanf("%d %d", &row, &column);
+    create(a, row, column);
+    printf("\n");
+    create(b, row, column);
+    
+    add_mat(a, b, c, row, column);
+    sparse_creation(c, row, column, res);
     sparse_display(res);
 
     return 0;
