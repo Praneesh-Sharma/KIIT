@@ -33,8 +33,7 @@ class C: public A, public B{
 };
 
 int main(){
-    B obj1;
-    C obj2;
+    C obj;
 
     return 0;
 }
