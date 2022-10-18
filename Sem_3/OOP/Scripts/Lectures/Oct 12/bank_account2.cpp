@@ -4,7 +4,8 @@ minimum balance. The ‘Current’ class stores the over-due amount. Include mem
 -withdraw 
 [For saving account minimum balance should be checked.]
 [For current account overdue amount should be calculated.]
--display balance*/
+-display balance
+Rewrite the assignment vii. From Inheritance including the parameterized constructors in all the classes*/
 #include <iostream>
 #include <string.h>
 using namespace std;
@@ -34,6 +35,9 @@ class Savings: public Account{
             cout << "Enter minimum balance: ";
             cin >> min_bal;
         }
+        Savings(int val){
+            min_bal = val;
+        }
         void withdraw(int val){
             if(balance - val >= min_bal){
                 balance -= val;
@@ -55,6 +59,13 @@ class Current: public Account{
     private:
         int overdue = 0;
     public:
+        Current(){
+            cout << "Enter overdue amount: ";
+            cin >> overdue;
+        }
+        Current(int val){
+            overdue = val;
+        }
         void withdraw(int val){
             balance -= val;
             cout << "withdrawn" << endl;
@@ -74,16 +85,29 @@ class Current: public Account{
 };
 
 int main(){
-    Savings S;
-    S.deposit(100);
-    S.display();
-    S.withdraw(50);
-    S.display();
+    Savings S1;
+    S1.deposit(100);
+    S1.display();
+    S1.withdraw(50);
+    S1.display();
+
+    Savings S2(50);
+    S2.deposit(100);
+    S2.display();
+    S2.withdraw(500);
+    S2.display();
     
-    Current C;
-    C.withdraw(500);
-    C.display();
-    C.deposit(300);
-    C.display();
+    Current C1;
+    C1.withdraw(500);
+    C1.display();
+    C1.deposit(300);
+    C1.display();
+
+    Current C2(100);
+    C2.withdraw(500);
+    C2.display();
+    C2.deposit(700);
+    C2.display();
+
     return 0;
 }
