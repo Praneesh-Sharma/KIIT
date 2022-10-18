@@ -22,7 +22,7 @@ class B{
         }
 };
 
-class C: public A, public C{
+class C: public A, public B{
     public:
         C(){
             cout << "constructor C called" << endl;
