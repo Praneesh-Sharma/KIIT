@@ -12,12 +12,12 @@ class Array{
             cin >> arr[i];
             i++;
         }
-        Array operator <<(int num){
+        Array operator >>(int num){
             arr[i] = num;
             i++;
             cout << "Inserted" << endl;
         }
-        Array operator >>(int num){
+        Array operator <<(int num){
             cout << "Element: " << arr[num] << endl;
         }
 };
@@ -25,11 +25,11 @@ class Array{
 int main(){
     Array a;
     a.input();
-    a << 10;
-    a << 20;
-    a >> 0;
-    a >> 1;
-    a >> 2;
+    a >> 10;
+    a >> 20;
+    a << 0;
+    a << 1;
+    a << 2;
 
     return 0;
 }
