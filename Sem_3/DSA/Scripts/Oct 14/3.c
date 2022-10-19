@@ -79,33 +79,5 @@ int main(){
                 printf("Invalid Value.");
         }
     }
-
-  
-    /*cqDelete();
-
-    cqInsert(1);
-    cqInsert(2);
-    cqInsert(3);
-    cqInsert(4);
-    cqInsert(5);
-    
-    cqInsert(6);
-
-    Traverse();
-    cqDelete();
-
-    Traverse();
-
-    cqInsert(7);
-    Traverse();
-
-    cqInsert(8);
-    cqDelete();
-    cqDelete();
-    cqInsert(9);
-    cqInsert(10);
-    Traverse();
-    */
-
     return 0;
 }
