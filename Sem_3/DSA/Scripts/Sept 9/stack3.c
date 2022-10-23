@@ -48,7 +48,7 @@ int main(){
                 break;
             case 2:
                 printf("Enter character: ");
-                scanf("%d", &ch);
+                scanf("%c", &ch);
                 fflush(stdin);
                 push(ch);
                 display();
