@@ -1,38 +1,51 @@
 //WAP to implement 2 stacks in a single array
 #include <stdio.h>
-int top1=-1, top2=-1;
+#define size 10
 
-void push(int stack, int top, int a){
-    if(top == -1)
-        printf("overflow");
-    else
-        stack[++top] = a;
+int arr[size];
+int top1=-1, top2=size;
+
+void push1(int val){
+    if(top1 < top2 -1){
+        top1++;
+        arr[top1]=val;
+    } else printf("OVERFLOW\n");
 }
 
-char pop(int stack, int top){
-    return stack[top--];
+void push2(int val){
+    if(top1 <top2-1){
+        top2--;
+        arr[top2]=val;
+    } else printf("OVERFLOW\n");
 }
 
-void split(int arr[], int a){
-    int top1, top2;
-    int m,n;
-    if(a%2==0){
-        m = a/2;
-        n = a/2;
-    }
-    else{
-        m=a/2;
-        n=m+1;
-    }
-    int stack1[m], stack2[n];
+void disp1(){
+    for(int i=top1;i>=0;i--)
+        printf(" %d", arr[i]);
+    printf("\n");
+}
 
+void disp2(){
+    for(int i=top2; i<size; ++i)
+        printf(" %d", arr[i]);
+    printf("\n");
 }
 
 int main(){
-    int n;
-    printf("Enter number of elements: ");
-    scanf("%d", &n);
-    int arr[n];
-    split(arr, n);
+    int arr[size], val;
+    for(int i=1; i<=5; ++i){
+        printf("Enter value: ");
+        scanf("%d", &val);
+        push1(val);
+    }
+    for(int i=6; i<=10; ++i){
+        printf("Enter value: ");
+        scanf("%d", &val);
+        push2(val);
+    }
+
+    disp1();
+    disp2();
+
     return 0;
 }
