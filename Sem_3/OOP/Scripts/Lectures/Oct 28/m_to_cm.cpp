@@ -26,7 +26,6 @@ class centi{
         }
 };
 
-
 int main(){
     int val;
     cout << "Enter metres: ";
