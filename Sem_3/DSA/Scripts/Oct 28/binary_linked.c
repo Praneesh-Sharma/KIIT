@@ -32,27 +32,27 @@ void buildTree(struct Tree *ptr){
     }
 }
 
-void printInorder(struct Tree *ptr){
+void Inorder(struct Tree *ptr){
     if (ptr == NULL)
         return;
-    printInorder(ptr->lc);
+    Inorder(ptr->lc);
     printf("%d ", ptr->data);
-    printInorder(ptr->rc);
+    Inorder(ptr->rc);
 }
 
-void printPreorder(struct Tree *ptr){
+void Preorder(struct Tree *ptr){
     if (ptr == NULL)
         return;
     printf("%d ", ptr->data);
-    printPreorder(ptr->lc);
-    printPreorder(ptr->rc);
+    Preorder(ptr->lc);
+    Preorder(ptr->rc);
 }
 
-void printPostorder(struct Tree *ptr){
+void Postorder(struct Tree *ptr){
     if (ptr == NULL)
         return;
-    printPostorder(ptr->lc);
-    printPostorder(ptr->rc);
+    Postorder(ptr->lc);
+    Postorder(ptr->rc);
     printf("%d ", ptr->data);
 }
 
@@ -62,11 +62,11 @@ void main(){
     buildTree(root);
 
     printf("\nInorder traversal of binary tree is: ");
-    printInorder(root);
+    Inorder(root);
 
     printf("\n\nPreorder traversal of binary tree is: ");
-    printPreorder(root);
+    Preorder(root);
 
     printf("\n\nPostorder traversal of binary tree is: ");
-    printPostorder(root);
+    Postorder(root);
 }
