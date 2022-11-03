@@ -41,7 +41,7 @@ class triangle: public shape{
         triangle(){
             cout << endl << "Enter base and height of triangle: ";
             cin >> base >> height;
-            area = base * height;
+            area = 0.5 * base * height;
         }
         void show(){
             cout << "Area of trianlge: " << area << endl;
