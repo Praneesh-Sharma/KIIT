@@ -7,42 +7,41 @@ If the input deviates from any of the constraints than handle with proper except
 using namespace std;
 
 void numplate(){
-    char c, arr2[2];
-    int x, arr[4];
+    char arr2[2];
+    int x, y=0, arr1[4];
     static int x1,x2;
 
     try{
-        cin >> c;
-        arr2[0]=c;
-        if(c== 'I'){throw 'x';}
-        cin >> c;
-        arr2[1]=c;
-        if(c== 'I'){throw 'x';}
-        cin >> x;
-        arr[1]=x;
-        if(c== 0){throw x;}
-        cin >> x;
-        arr[2]=x;
-        if(c== 0){throw x;}
-        cin >> x;
-        arr[3]=x;
-        if(c== 0){throw x;}
-        cin >> x;
-        arr[4]=x;
-        if(c== 0){throw x;}
+
+        cin >> arr2[0];
+        cin >> arr2[1];
+        cin >> arr1[0];
+        cin >> arr1[1];
+        cin >> arr1[2];
+        cin >> arr1[3];
+        
+        if(arr2[0]== 'I' && arr2[1] == 'N'){
+            throw 'x';
+        }
+        else if(arr1[0]==0 && arr1[1]==0 && arr1[2]==0 && arr1[3]==0){
+            throw x;
+        }
     }
-    catch(char x){x1++;}
-    catch(int x){x2++;}
-    
-    if(x1 == 2 || x2 == 4){
-        cout << "Invalid Number Plate" << endl;
+    catch(char x){
+        cout << "Invalid due to condition 1" << endl;
+        y++;
     }
-    else{
+    catch(int x){
+        cout << "Invalid due to condition 2" << endl;
+        y++;
+    }
+
+    if(y==0){
         for(int i=0;i<2;i++){
             cout << arr2[i];
         }
         for(int i=0;i<4;i++){
-            cout << arr[i];
+            cout << arr1[i];
         }
     }
 }
